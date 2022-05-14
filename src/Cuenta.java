@@ -1,7 +1,7 @@
 
-public class Cuenta {
+public abstract class Cuenta {
 	private int numero;
-	private double saldo;
+	protected double saldo;
 	private String titular;
 	
 	public Cuenta (int numero, double saldo) {
@@ -9,9 +9,9 @@ public class Cuenta {
 		this.saldo = saldo;	
 	}
 	
-	public void depositar(double valor) {
-		this.saldo += valor;
-	}
+	public abstract void depositar(double valor); 
+		//this.saldo += valor;
+	
 	
 	public void transferir(double valor, Cuenta cuenta) {
 		this.saldo -= valor;

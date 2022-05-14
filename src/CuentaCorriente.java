@@ -11,4 +11,10 @@ public class CuentaCorriente extends Cuenta {
 		super.retirar(valorAretirar);
 		System.out.println("se ejecuta metodo overrride");
 	}
+
+	@Override
+	public void depositar(double valor) {
+		this.saldo += valor;
+	}
+	
 }
