@@ -1,9 +1,10 @@
 
-public class CuentaCorriente extends Cuenta {
+public class CuentaCorriente extends Cuenta implements Tributacion{
 
 	public CuentaCorriente (int num, double saldo) {
 		super(num, saldo);
 	}
+	
 	
 	@Override
 	public void retirar(double valor) {
@@ -15,6 +16,11 @@ public class CuentaCorriente extends Cuenta {
 	@Override
 	public void depositar(double valor) {
 		this.saldo += valor;
+	}
+
+	@Override
+	public double getValorImpuesto() {
+		return super.saldo * 0.01;
 	}
 	
 }
