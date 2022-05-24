@@ -1,0 +1,39 @@
+
+En Java, existen dos interfaces para definir los criterios 
+para ordenar los elementos de una lista.
+
+Las interfaces son:
+
+-- java.lang.Comparable // Para definir el orden natural de los elementos 
+						  en la clase del objeto a ordenar.
+
+-- java.util.Comparator // El Comparator es un parámetro del método sort() 
+de la lista(clase List) y tambien de la clase Collections.
+
+ej: lista.sort(comparadorPorNombre);
+ej: Collections.sort(lista, comparadorPorNombre);
+ 
+ 
+
+  Para invertir el orden de la lista, puede utilizar el método 
+ reverse() de la clase Collections:
+
+ Collections.reverse(lista);
+ 
+ Para mezclar existe el método shuffle() y para girar existe el 
+  método rotate():
+
+ Collections.shuffle(lista);
+ Collections.rotate(lista, 5); //rotar 5 posiciones
+ 
+ 
+ -- Ordenar Arrays:
+  Usar el método de ordenación de la clase Arrays. La clase Arrays
+ es similar a Collections en el sentido de que también une varios 
+ métodos de utilidad:
+
+int[] numeros = new int[]{43, 15, 64, 22, 89};
+
+Arrays.sort(numeros); //método utilitário sort
+ 
+ 

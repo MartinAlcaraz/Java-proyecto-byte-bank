@@ -1,0 +1,71 @@
+Modificadores de acceso
+
+public  --> acceso desde cualquier parte del proyecto
+default --> acceso desde el paquete al que pertenece 
+protected --> default + clases hijas/heredadas.
+private --> acceso desde la misma clase
+
+El modificador de acceso "default" no se escribe, es por defecto default. 
+Ej de clase Numeros{
+	int numero;
+}
+
+Para crear un archivo .jar hacer: 
+-- click boton derecho
+-- export
+-- opcion Java --> JAR file
+-- seleccionar el paquete src en la siguiente ventana
+
+
+Para usar el archivo .jar en otro proyecto:
+-- crear una carpeta libs dentro de src
+-- copiar el archivo .jar en la carpeta libs
+-- click derecho --> Build Path --> Configure Build Path
+-- Ahora se creó una nueva librería llamada "Referenced Libraries"
+ 
+
+ Metodo contains: compara las referencias de los objetos
+ Este metodo utiliza el metodo "equals", y para sobreescribir el 
+ metodo contains hay que sobreescribrir "equals", para por ej. hacer
+ comparar los valores de los objetos y no sus referencias. 
+ Ver la clase Cuenta y TestArrayList2.
+ 
+ 
+=====>> Listas: Vector LinkedList y ArrayList
+
+ Vector: en la practica no es conveniente usar. Se utilizan ArrayList o LinkedList
+ 
+ - ArrayList: es una matriz de tamaño variable que crece a medida que se agregan 
+  elementos adicionales. 
+  
+ - LinkedList: es una implementación de lista / cola doblemente enlazada. 
+ 
+ La principal diferencia es un tema de implementación ArrayList implementa la lista con 
+ arreglos linkeados, lo que la hace muy eficiente para recorrer pero ineficiente para 
+ insertar o eliminar elementos que se no encuentren en el final. 
+  En cambio LinkedList es una lista de elementos linkeados (en realidad es una lista 
+  doblemente enlazada) lo que la hace lenta para recorrer pero sumamente eficiente para 
+  insertar o eliminar elementos. Esta es la principal diferencia y hay que recordarla siempre.
+
+ArrayList :
+	* Usa internamente un arreglo dinámico para almacenar los elementos.
+	* Proporciona una manipulación lenta. 
+	* Es la mejor opción para almacenar y acceder a datos o elementos consecutivos. 
+
+LinkedList:
+	* Proporciona una manipulación más rápida porque utiliza una lista doblemente enlazada.
+	* Se puede utilizar como lista y cola porque implementa interfaz de List, Deque y Queue.
+	* Es mejor para manipulación de elementos, es decir, para insertar y eliminar elementos.
+	
+Conclusion:
+   Si necesitamos agregar elementos consecutivos y recorrerlos debemos utilizar ArrayList 
+   y si en cambio necesitamos insertar y eliminar valores no consecutivos debemos 
+   usar LinkedList.
+ 
+ 
+ --Wrappers: las clases Integer Double Float ,etc. son wrappers. Las clases iniciadas con 
+ letra mayuscula envuelven ("wrap") el valor primitivo correspondiente( int, double, 
+ float) en un objeto.
+   Por ej. un objeto tipo Integer contiene un campo cuyo tipo es int.
+ 
+ 
